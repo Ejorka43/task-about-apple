@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include "head.h"
-// Функции, которые будут интегрироваться
+// Р¤СѓРЅРєС†РёРё, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РёРЅС‚РµРіСЂРёСЂРѕРІР°С‚СЊСЃСЏ
 
-// Человек находится на краю яблони
+// Р§РµР»РѕРІРµРє РЅР°С…РѕРґРёС‚СЃСЏ РЅР° РєСЂР°СЋ СЏР±Р»РѕРЅРё
 double f1(double x, double Q, double R, double r) {
     return 2*sqrt((Q+r)*(Q+r)-((x-Q)*(x-Q)));
 }
@@ -12,7 +12,7 @@ double f2(double x, double Q, double R, double r) {
     return 2*sqrt((R+2*r)*(R+2*r)-(x*x));
 }
 
-// Человек находится по контуру яблони
+// Р§РµР»РѕРІРµРє РЅР°С…РѕРґРёС‚СЃСЏ РїРѕ РєРѕРЅС‚СѓСЂСѓ СЏР±Р»РѕРЅРё
 double f3(double x, double Q, double R, double r) {
     return 2*sqrt((Q+r)*(Q+r)-(x-(Q-R))*(x-(Q-R)));
 }
@@ -20,7 +20,7 @@ double f4(double x, double Q, double R, double r) {
     return 2*sqrt((R+2*r)*(R+2*r)-x*x);
 }
 typedef double (*fnc_t)(double, double, double, double);
-// Функция для численного интегрирования методом трапеций
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ С‡РёСЃР»РµРЅРЅРѕРіРѕ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ РјРµС‚РѕРґРѕРј С‚СЂР°РїРµС†РёР№
 double trapezoidal_integration(double a, double b, int n, fnc_t f, double Q, double R, double r) {
     double h = (b - a) / n;
     double sum = 0.5 * (f(a, Q, R, r) + f(b, Q, R, r));
