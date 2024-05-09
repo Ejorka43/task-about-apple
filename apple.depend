@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1715180612 source:c:\users\ejork\onedrive\Рабочий стол\c\apple\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	"head.h"
+
+1715179810 source:c:\users\ejork\onedrive\Рабочий стол\c\apple\model.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+
+1715180382 source:c:\users\ejork\onedrive\Рабочий стол\c\apple\theoretical.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"head.h"
+
+1715181648 c:\users\ejork\onedrive\Рабочий стол\c\apple\head.h
+
